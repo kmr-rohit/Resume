@@ -7,15 +7,18 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{titlesec}
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
-\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=2pt, parsep=0pt}
+\setlist[itemize]{label=-, leftmargin=*, itemsep=1pt, topsep=2pt, parsep=0pt}
 \titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
 \titlespacing*{\section}{0pt}{5pt}{3pt}
 
-\newcommand{\role}[4]{\textbf{#1} -- #2 \hfill #3\\ \textit{#4}}
+\newcommand{\role}[4]{\textbf{#1} - #2 \hfill #3\\ \textit{#4}}
 
 \begin{document}
 
@@ -71,26 +74,26 @@ AI Application Developer with experience building agentic AI workflows, RAG pipe
 \end{itemize}
 
 \section{Projects}
-\textbf{FlowForge -- Visual Agent Workflow Builder} \hfill FastAPI, React, ReactFlow, ChromaDB, FAISS, Supabase
+\textbf{FlowForge - Visual Agent Workflow Builder} \hfill FastAPI, React, ReactFlow, ChromaDB, FAISS, Supabase
 \begin{itemize}
 \item Built FastAPI microservices and RAG pipelines using ChromaDB, FAISS, and Together AI for LLM inference.
 \item Developed React/ReactFlow UI with Supabase PostgreSQL and Prisma for visual agent workflow configuration.
 \end{itemize}
 
-\textbf{ChemTutor LLM -- Fine-tuned Chemistry Language Model} \hfill Llama 7B, QLoRA, Hugging Face, PyTorch
+\textbf{ChemTutor LLM - Fine-tuned Chemistry Language Model} \hfill Llama 7B, QLoRA, Hugging Face, PyTorch
 \begin{itemize}
 \item Fine-tuned Llama 7B on Class 12 Chemistry NCERT content using QLoRA 4-bit quantization on a 4GB VRAM GPU.
 \item Published adapters to Hugging Face, enabling integration with compatible base LLMs for student doubt-solving use cases.
 \end{itemize}
 
-\textbf{Code It NITW -- Programming Learning Platform} \hfill React, Tailwind CSS, Firebase, Chart.js
+\textbf{Code It NITW - Programming Learning Platform} \hfill React, Tailwind CSS, Firebase, Chart.js
 \begin{itemize}
 \item Built platform used by 200+ daily users for contests, interview experiences, and structured DSA preparation.
 \item Integrated Codeforces API, Firebase authentication, and Chart.js rankings for real-time competitive programming insights.
 \end{itemize}
 
 \section{Education}
-\textbf{National Institute of Technology, Warangal} -- B.Tech in Mechanical Engineering \hfill 2020 -- 2024\\
+\textbf{National Institute of Technology, Warangal} - B.Tech in Mechanical Engineering \hfill 2020 - 2024\\
 CGPA: 7.34
 
 \section{Achievements and Leadership}
