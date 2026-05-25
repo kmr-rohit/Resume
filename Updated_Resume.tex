@@ -1,107 +1,186 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Rohit Kumar - ATS Friendly Resume
+% Rohit Kumar - Resume
+% Based on Deedy-Resume Template (XeLaTeX)
+% Tailored for AI/Cloud Application Developer Role
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[a4paper,10pt]{article}
-\usepackage[margin=0.45in]{geometry}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{titlesec}
-\input{glyphtounicode}
-\pdfgentounicode=1
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
 
-\pagenumbering{gobble}
-\setlength{\parindent}{0pt}
-\setlist[itemize]{label=-, leftmargin=*, itemsep=1pt, topsep=2pt, parsep=0pt}
-\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{5pt}{3pt}
-
-\newcommand{\role}[4]{\textbf{#1} - #2 \hfill #3\\ \textit{#4}}
+\pagestyle{fancy}
+\fancyhf{}
 
 \begin{document}
 
-\begin{center}
-{\LARGE \textbf{Rohit Kumar}}\\
-\href{mailto:rr7433446@gmail.com}{rr7433446@gmail.com} | +91-9306641852 | Hyderabad, India\\
-\href{https://www.linkedin.com/in/rr7433446/}{LinkedIn} | \href{https://kmrrohit.vercel.app/}{Portfolio} | \href{https://github.com/kmr-rohit}{GitHub}
-\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{Rohit Kumar}{
+\urlstyle{same}\href{mailto:rr7433446@gmail.com}{rr7433446@gmail.com} | +91-9306641852 \\
+\href{https://www.linkedin.com/in/rr7433446/}{LinkedIn} | \href{https://kmrrohit.vercel.app/}{Portfolio}
+}
 
-\section{Professional Summary}
-AI Application Developer with experience building agentic AI workflows, RAG pipelines, cloud-native microservices, and enterprise automation. Hands-on with Python, Java, FastAPI, LangChain, LangGraph, Kubernetes, OCI, OKE, KServe, Kubeflow Pipelines, vector databases, and LLM-based systems. Google Summer of Code 2026 contributor for Kubeflow, focused on Agentic RAG, MCP tools, ingestion pipelines, and reproducible deployment on OCI.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COLUMN ONE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Technical Skills}
-\textbf{Languages:} Python, Java, C++, JavaScript, TypeScript, SQL\\
-\textbf{AI, LLMs, and Agents:} LangChain, LangGraph, RAG, MCP, Kagent, Prompt Engineering, Llama, Autogen, PandasAI, QLoRA/LoRA\\
-\textbf{Backend and APIs:} FastAPI, Node.js, Express.js, REST APIs, Java ADF, Spring Boot basics\\
-\textbf{Cloud, DevOps, and MLOps:} OCI, OKE, Kubernetes, Kubeflow Pipelines, KServe, Docker, GitHub Actions, CI/CD, Git, Postman\\
-\textbf{Databases and Search:} PostgreSQL, MySQL, Elasticsearch, Milvus, FAISS, ChromaDB, Firebase, Supabase, Prisma ORM\\
-\textbf{Frontend:} React, Next.js, TypeScript, Tailwind CSS, ReactFlow, ShadCN UI
+\begin{minipage}[t]{0.33\textwidth}
 
-\section{Professional Experience}
-\role{Oracle}{AI Application Developer, Oracle Applications Labs (OAL)}{Apr 2026 -- Present}{Hyderabad, India}
-\begin{itemize}
-\item Added web-search enhancement for MPN matching when fuzzy matching and clustering did not produce sufficient matches.
-\item Integrated catalog lookup across official and reliable third-party retailer sources to improve asset and part matching coverage for ACT workflows.
-\item Supported downstream reconciliation and migration-readiness analysis by improving discovery of manufacturer part information.
-\item Built a LangGraph proof of concept to evaluate moving the ACT agent from Codex-style skill execution to multi-agent orchestration.
-\item Converted Codex skill concepts into specialized worker-agent responsibilities and evaluated routing, maintainability, and LangChain/LangGraph tradeoffs.
-\end{itemize}
-
-\role{Google Summer of Code 2026 - Kubeflow}{Open Source Contributor, Agentic RAG on Kubeflow}{May 2026 -- Present}{Remote}
-\begin{itemize}
-\item Accepted for Kubeflow GSoC 2026 project to expand \texttt{kubeflow/docs-agent} into an Agentic RAG reference architecture.
-\item Building multi-index retrieval across documentation, GitHub issues, and Kubeflow manifests using Python, MCP tools, Kagent, Milvus, and vector search.
-\item Developed ingestion pipelines with Kubeflow Pipelines and KServe deployment patterns; live-tested docs-agent stack on OCI/OKE.
-\item Indexed 1,631 GitHub issue chunks and 477 manifest/code chunks, improving semantic search coverage for technical Kubeflow questions.
-\item Created a 71-test suite and CI workflow foundation to improve reliability, parser coverage, and maintainability for the open-source project.
-\end{itemize}
-
-\role{Oracle}{Application Developer, Supply Chain Management (SCM)}{Jun 2024 -- Apr 2026}{Hyderabad, India}
-\begin{itemize}
-\item Designed AI agent workflows for Oracle Fusion Supply Chain Planning using Python, LangChain, PandasAI, and enterprise data sources.
-\item Built multi-agent query-resolution flows for plan exceptions, note generation, and pivot-table analysis on planning data.
-\item Implemented order recommendation workflow to classify orders for release or review using business rules, exceptions, notes, and batch ESS processing.
-\item Led a RAG chatbot with Llama 3.1 and vector search to provide real-time lead-time insights from supply chain datasets.
-\item Contributed Java ADF and SQLDeveloper features for Supply Chain Planning and supported Gen AI Hackathon-winning enterprise prototype.
-\end{itemize}
-
-\role{Oracle}{Application Developer Intern}{May 2023 -- Jul 2023}{Hyderabad, India}
-\begin{itemize}
-\item Developed copy-data functionality for lead-time columns and optimized retrieval using Elasticsearch and PATCH updates.
-\item Added linear-regression trend analysis in Oracle JET charts for supply chain visualization.
-\end{itemize}
-
-\section{Projects}
-\textbf{FlowForge - Visual Agent Workflow Builder} \hfill FastAPI, React, ReactFlow, ChromaDB, FAISS, Supabase
-\begin{itemize}
-\item Built FastAPI microservices and RAG pipelines using ChromaDB, FAISS, and Together AI for LLM inference.
-\item Developed React/ReactFlow UI with Supabase PostgreSQL and Prisma for visual agent workflow configuration.
-\end{itemize}
-
-\textbf{ChemTutor LLM - Fine-tuned Chemistry Language Model} \hfill Llama 7B, QLoRA, Hugging Face, PyTorch
-\begin{itemize}
-\item Fine-tuned Llama 7B on Class 12 Chemistry NCERT content using QLoRA 4-bit quantization on a 4GB VRAM GPU.
-\item Published adapters to Hugging Face, enabling integration with compatible base LLMs for student doubt-solving use cases.
-\end{itemize}
-
-\textbf{Code It NITW - Programming Learning Platform} \hfill React, Tailwind CSS, Firebase, Chart.js
-\begin{itemize}
-\item Built platform used by 200+ daily users for contests, interview experiences, and structured DSA preparation.
-\item Integrated Codeforces API, Firebase authentication, and Chart.js rankings for real-time competitive programming insights.
-\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Education}
-\textbf{National Institute of Technology, Warangal} - B.Tech in Mechanical Engineering \hfill 2020 - 2024\\
-CGPA: 7.34
 
-\section{Achievements and Leadership}
-\begin{itemize}
-\item Won Oracle Gen AI Hackathon: 1st among 33 teams and top 5 among 300+ employees.
-\item Runner-Up, Tri-NIT Hackathon 2024 in Backend Development track.
-\item Solved 600+ programming problems across LeetCode, GeeksforGeeks, CodeChef, and Codeforces.
-\item Placement Trainer, Training and Placement Cell, NIT Warangal; Executive Member, CodeChef Chapter NITW.
-\end{itemize}
+\subsection{NIT Warangal}
+\descript{B.Tech, Mechanical Engg.}
+\location{2020 -- 2024 | CGPA: 7.34}
+\sectionsep
 
+\subsection{DAV Public School, Jaipur}
+\descript{CBSE Class XII}
+\location{2019 | Percentage: 82\%}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\subsection{Languages}
+Java \textbullet{} Python \textbullet{} C++ \\
+JavaScript \textbullet{} TypeScript \textbullet{} SQL
+\sectionsep
+
+\subsection{AI / ML}
+LangChain \textbullet{} RAG Pipelines \\
+Prompt Eng. \textbullet{} QLoRA/LoRA \\
+PandasAI \textbullet{} Autogen \textbullet{} Llama \\
+FAISS \textbullet{} ChromaDB \\
+N8N \textbullet{} Flowise
+\sectionsep
+
+\subsection{Backend \& APIs}
+FastAPI \textbullet{} Node.js \textbullet{} Express \\
+Java ADF \textbullet{} RESTful APIs
+\sectionsep
+
+\subsection{Frontend}
+React \textbullet{} Next.js \textbullet{} Tailwind \\
+ReactFlow \textbullet{} ShadCN UI
+\sectionsep
+
+\subsection{Databases}
+PostgreSQL \textbullet{} MySQL \\
+Elasticsearch \textbullet{} Firebase \\
+Supabase \textbullet{} Prisma ORM
+\sectionsep
+
+\subsection{DevOps / Tools}
+Docker \textbullet{} GitHub Actions \\
+CI/CD \textbullet{} Git \textbullet{} Postman
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ACHIEVEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Achievements}
+\sectionsep
+\begin{tightemize}
+\item Won Oracle Gen AI Hackathon — 1st/33 teams, top 5 among 300+ employees
+\item Runner-Up, Tri-NIT Hackathon 2024 (Backend Dev Track)
+\item 600+ problems on LeetCode, GeeksforGeeks, CodeChef, Codeforces
+\item Conducted 15+ CP contests with discussions for students
+\end{tightemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LEADERSHIP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Leadership}
+Placement Trainer \\
+{\footnotesize Training \& Placement Cell, NITW}
+\sectionsep
+Executive Member \\
+{\footnotesize CodeChef Chapter, NITW}
+
+\end{minipage}
+\hfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COLUMN TWO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.66\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Oracle}
+\descript{| Application Developer }
+\location{June 2024 -- Present | Hyderabad, India}
+\vspace{\topsep}
+\begin{tightemize}
+\item Designed AI agent workflows using AI Agent Studio for Fusion Supply Chain Planning product.
+\item Built multi-agent architecture for customer query resolution with note generation and pivot table analysis on SCP Exception and Notes.
+\item Implemented order classification agent (release/review) with batch ESS support for large-scale processing honoring Document Rules Evaluation.
+\item Led RAG chatbot using Llama 3.1 with vector search for real-time lead time insights.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{OnePriceAI}
+\descript{| Technical Founder }
+\location{Jan 2024 -- Mar 2024}
+\begin{tightemize}
+\item Built an AI chat platform aggregating 5+ LLM providers with real-time streaming via Vercel AI and OpenAI SDK.
+\item Integrated 3+ open-source image generation models using Together AI SDK for multi-modal capabilities.
+\item Implemented auth, rate limiting, and Paddle payment integration for scalable SaaS operations.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Oracle}
+\descript{| Application Developer Intern }
+\location{May 2023 -- July 2023 | Hyderabad, India}
+\begin{tightemize}
+\item Developed data copy and optimized retrieval using Elasticsearch for lead time columns in Java ADF.
+\item Added Linear Regression trend analysis in Oracle JET charts for supply chain visualization.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\runsubsection{FlowForge}
+\descript{| Visual Agent Workflow Builder}
+\location{FastAPI, React, ReactFlow, ChromaDB, FAISS, Supabase}
+\begin{tightemize}
+\item Built FastAPI microservices with RAG pipelines using ChromaDB, FAISS, and Together AI for LLM inference.
+\item Developed React/ReactFlow frontend with Supabase PostgreSQL and Prisma for visual agent workflows.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{ChemTutor LLM}
+\descript{| Fine-tuned Chemistry Language Model}
+\location{Llama 7B, QLoRA, Hugging Face, PyTorch}
+\begin{tightemize}
+\item Fine-tuned Llama 7B on Chemistry NCERT using QLoRA (4-bit quantization) on consumer GPU (4GB VRAM).
+\item Deployed model adapters to Hugging Face, enabling integration with compatible base LLMs.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Code It NITW}
+\descript{| Programming Learning Platform}
+\location{React, Tailwind CSS, Firebase, Chart.js}
+\begin{tightemize}
+\item Built platform used by 200+ daily users for contests, interview experiences, and structured DSA prep.
+\item Integrated Codeforces API, Firebase auth, and Chart.js for real-time rankings and visualizations.
+\end{tightemize}
+
+\end{minipage}
 \end{document}
