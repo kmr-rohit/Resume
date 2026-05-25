@@ -140,12 +140,17 @@
 %----------HEADING-----------------
 
 
-\begin{tabularx}{\linewidth}{L r}
+\parbox{2.35cm}{%
+\includegraphics[width=2.35cm,clip]{Mnit_logo_bw.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
   \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
-  \course &  \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ \emaila}\\
+  \course &  \href{mailto:\rr7433446@gmail.com}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb} {rr7433446@gmail.com}}\\
   {Mechanical Engineering} &  \href{https://kmrrohit.vercel.app/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {Portfolio}} \\
   {National Institute Of Technology, Warangal} & \href{https://www.linkedin.com/in/rr7433446/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
 \end{tabularx}
+}
 % \parbox{3.0cm}{%
 % \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
 % }
@@ -172,15 +177,15 @@
 \section{\textbf{Work Experience}}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Oracle Hyderabad}{Apr 2026 - Present}
+      {Oracle Hyderabad}{June 2024 - Present}
       {AI Application Developer, Oracle Applications Labs (OAL)}{}
       \vspace{-1.0mm}
         \resumeItemListStart
-        \item{Added web-search enhancement for MPN matching when fuzzy matching and clustering did not produce sufficient matches.}
-        \item{Integrated catalog lookup across official and reliable third-party retailer sources to improve asset and part matching coverage for ACT workflows.}
-        \item{Supported downstream reconciliation and migration-readiness analysis by improving discovery of manufacturer part information.}
-        \item{Built a LangGraph proof of concept to evaluate moving the ACT agent from Codex-style skill execution to multi-agent orchestration.}
-        \item{Converted Codex skill concepts into specialized worker-agent responsibilities and evaluated routing, maintainability, and LangChain/LangGraph tradeoffs.}
+        \item{Added web-search enhancement for MPN matching when fuzzy matching and clustering did not provide sufficient matches.}
+        \item{Built catalog lookup across official and reliable third-party retailer sources to improve asset and part matching coverage for ACT workflows.}
+        \item{Built LangGraph POC for ACT Agent, converting Codex-style skills into specialized worker-agent responsibilities for clearer routing and maintainability.}
+        \item{Developed AI-driven agentic workflows using LangChain, Python, PandasAI to enhance supply chain planning.}
+        \item{Led implementation of intelligent chatbot leveraging RAG and Meta Llama 3.1, providing real-time data-driven lead time insights.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -189,24 +194,10 @@
       \vspace{-1.0mm}
       \resumeItemListStart
     \item {Accepted for Kubeflow GSoC 2026 project to expand \texttt{kubeflow/docs-agent} into an Agentic RAG reference architecture.}
-    \item {Building multi-index retrieval across documentation, GitHub issues, and Kubeflow manifests using Python, MCP tools, Kagent, Milvus, and vector search.}
-    \item {Developed ingestion pipelines with Kubeflow Pipelines and KServe deployment patterns; live-tested docs-agent stack on OCI/OKE.}
-    \item {Indexed 1,631 GitHub issue chunks and 477 manifest/code chunks, improving semantic search coverage for technical Kubeflow questions.}
-    \item {Created a 71-test suite and CI workflow foundation to improve reliability and maintainability for the open-source project.}
+    \item {Building multi-index retrieval across docs, GitHub issues, and Kubeflow manifests using Python, MCP tools, Kagent, Milvus, and vector search.}
+    \item {Developed Kubeflow Pipelines ingestion workflows and KServe deployment patterns; live-tested docs-agent stack on OCI/OKE.}
+    \item {Indexed 1,631 GitHub issue chunks and 477 manifest/code chunks; created a 71-test suite and CI foundation for the project.}
     \resumeItemListEnd
-
-    \resumeSubheading
-      {Oracle Hyderabad}{June 2024 - Apr 2026}
-      {Application Developer, Supply Chain Management (SCM)}{}
-      \vspace{-1.0mm}
-        \resumeItemListStart
-        \item{Developed AI-driven agentic workflows using LangChain, Python, PandasAI to enhance supply chain planning.}
-        \item{Built Multi-Agent teams seeded to customers, helping them answer plan exceptions and queries with note generation for pivot table data in chat.}
-        \item{Implemented AI recommendation workflow agent: classifies order lists to \textit{release or review} based on rules, exceptions, and notes. Integrated Batch ESS job support for large datasets.}
-        \item{Led implementation of intelligent chatbot leveraging RAG and Meta Llama 3.1, providing real-time data-driven lead time insights.}
-        \item{Collaborated on new Supply Chain Planning Product features using Java ADF, SQLDeveloper.}
-        \item{Contributed to Gen AI Hackathon-winning project focused on generative AI in enterprise solutions.}
-      \resumeItemListEnd
     
     \resumeSubheading
       {Oracle Hyderabad}{May 2023 - July 2023}
