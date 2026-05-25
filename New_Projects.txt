@@ -1,0 +1,102 @@
+Projects Added New : 
+
+1. Chem fine tuned llm : This project involved fine tunning llama 7b model on chem 12 chemistry ncert. 
+Linkedin post : 
+Many times while preparing for JEE or board exams, I used to wonder if I could ask my doubts again to my tutor — especially when I or someone else felt too shy to ask in class, or when I simply forgot and wanted to revisit a concept. It wasn’t always easy.
+
+So me and Akshat Rai Laddha decided to experiment with something that could solve this problem. We used the open-source Llama model and fine-tuned it using the NCERT Class 12 Chemistry textbook dataset, applying QLoRA on our personal laptop (RTX 3050 GPU with 4GB VRAM). After that, we uploaded the adapters to Hugging Face so that anyone can test it by combining them with any compatible base LLM.
+
+You can also try it here: https://lnkd.in/gT2t8KfJ
+
+I know there’s still a lot of room for improvement, but this project can really help students memorize inorganic chemistry by interacting with it like a study companion. 
+
+We’re also planning to add support for Organic Chemistry Reactions, where users will be able to ask about any named reaction and get detailed images showing the complete mechanism steps along with examples. Wouldn’t that be helpful?
+
+Do you think it would be a good idea if we hosted it online so that students can chat with it freely to clear their doubts?
+
+Pic1 : Base Model Response. 
+Pic2 : Response with Fine Tuned Base Model with QLoRA Adapters
+
+
+2. Csv Agent : 
+Data-Driven Lead Time Insights in Supply Chain
+Team 2
+
+Team Members: Govind Yadav, Pranjal Singh, Rohit Kumar, Sriharika Sunkara, Venkata Pallavi Mettupalli
+
+Date of Submission: 03 Sep 2024 
+
+Executive Summary
+Objective: Develop a generative AI agent that provides lead time insights based on user prompts to improve supply chain efficiency and responsiveness.
+Impact: The solution aims to enhance customer satisfaction, reduce inventory costs, and streamline supply chain operations by delivering accurate lead time insights through an interactive chatbot interface.
+Use Case:
+Use Case Description: The use case focuses on generating data-driven insights into supply chain lead times using a generative AI agent. The agent should be capable of responding to user prompts with summarized insights, potentially including visualizations. The user can simply receive concise information through a chatbot without analyzing the whole data.
+Relevance: In a dynamic supply chain environment, having real-time, accurate insights into lead times can significantly improve decision-making, reduce costs, and enhance customer satisfaction.
+Generative AI Fit: Generative AI is well-suited to analyze and summarize complex data sets and understanding user query, making it ideal for providing tailored insights into lead times based on user queries.
+Solution and Implementation details:
+Solution Architecture:
+
+The solution includes a chat interface for entering user query and displaying relevant results. The query entered by the user is passed on to an RAG Agent using Bamboo LLM which fetches the relevant information from given data and give equivalent Python Pandas Executable code to get answer DataFrame/value . This response answer along with the user query is shared to a AssistantAgent ( Autogen ) using Meta's Llama 3.1 to generate an summarised text description for response answer . The chat interface interacts with backend Python Script by cloud hosted URL endpoints and renders the change. 
+
+Both RAG & AssistantAgent from autogen uses scalable, reliable llm's which maintains a context of 10k tokens per chat sessions. Knowing about previous queries to give accurate responses. Both agents converts the data and user query to embeddings and then stores them in a indexed vector database to perform Semantic search. Thus, Building a inbuilt cache to fetch response's faster to already called user queries.  
+
+Tools and Technologies:
+
+Oracle VBCS: Utilised for developing the front-end chat interface.
+CSV Data: Static database used for development & model training.
+Python, Pandas, Matplotlib/Seaborn: Used for data handling and visualization.
+PandasAI Dataframe Smart Agent: Responsible for generating data insights based on user queries.
+Llama Model: Utilized for summarizing insights according to user queries.
+FastAPI: Used to create REST endpoints that integrate with the VBCS application.
+Railway: Platform for hosting the backend application.
+Application Workflow:
+
+ 
+
+The user enters a query into the chat interface of the VBCS front-end application and submits it by either pressing the send button or hitting enter.
+The VBCS front-end application temporarily stores the query and generates a placeholder response to indicate that the backend is processing the request.
+The backend application, hosted on the Railways platform, uses FastAPI to expose API endpoints for communication with the front end.
+The VBCS front-end application sends an API request to the backend, passing the user query in the request body.
+The backend application processes the query using the PandasAI Dataframe Smart Agent, which generates a response either as text (for single-object outputs) or as a dataframe object (for multiple-object outputs).
+The user query and the output from the PandasAI Dataframe Smart Agent are then passed to a second agent, the Llama model, which summarizes the output in line with the user query.
+The summarized output is returned as the response to the API call initiated by the VBCS front-end application.
+The VBCS front-end application updates the message array with this response.
+The response is processed and formatted depending on whether it is a text or image respoin nse, and then displayed to the user, replacing the placeholder response.
+Model Selection: The PandasAI Dataframe Smart Agent was selected for processing user queries and generating insights from the CSV data after evaluating various alternatives, such as langchainCSV, Gemini, and groq. It demonstrated the highest accuracy and suitability for our use case. Similarly, the Llama model was chosen for its effectiveness in summarizing the generated insights.
+
+Testing and Validation: The solution has been tested with various user prompts to ensure the accuracy and relevance of the insights provided.
+
+Use Case Execution
+Workflow: Users interact with the AI agent via a chat interface, inputting prompts related to lead time. The system processes the input, queries the LLM, and returns summarized insights, along with visualizations if required.
+User Interaction: Users can ask specific questions about lead times, such as trends over time, supplier performance, or variance analysis. The AI agent provides concise, actionable insights.
+Outputs and Results: Examples include summaries of lead time trends, visualizations of lead time distribution, and supplier performance metrics. Results are tailored to the user's query.
+Future Improvements
+Chat history: Storing the chat history of users for future references.
+Dynamic Data Integration: Integrate real-time data sources(SQL DB or Opensearch Endpoints ) to enhance the timeliness of insights.
+Scalability and Performance Optimization: Enhance backend scalability to manage larger datasets and increased user load without performance degradation.
+Security : Hosting backend on Fusion AI cloud Generative AI Agents and connecting to secured Oracle SQL DB's.
+Templating : Creating a basic RAG Data Based template allowing other team's to connect their own Database and enviornment facilitating faster developments.
+Advanced Visualization Tools: Incorporate more sophisticated visualization tools for deeper and more intuitive data analysis.
+User Customization: Enable users to customize queries allowing him to Read/Write/Update data and insights, offering more detailed and specific data exploration
+Business Value
+Enhances supply chain efficiency and responsiveness with real-time, data-driven lead time insights.
+Improves decision-making, directly impacting customer satisfaction and reducing inventory costs.
+Simplifies access to complex data through an intuitive chatbot interface, enabling quick and informed decisions.
+Optimizes overall supply chain operations and agility by providing actionable insights.
+Learning Outcomes
+Demonstrated the effectiveness of generative AI models (PandasAI and Llama) in processing and summarizing large datasets.
+Highlighted the importance of a user-friendly interface for non-technical users to interact with complex data.
+Emphasized the need for robust backend systems to support real-time data processing and AI-driven insights.
+Underlined the significance of thorough testing and validation to ensure accuracy and relevance across diverse user scenarios.
+Prompt Queries;
+Which supplier have more average variance percentage?
+Give me number of orders having variance percentage greater than 100% from supplier StarElectronics? 
+Give me details about order EC3MMORD1031 
+What is the variance percentage for this order. 
+Plot me chart for number of orders per supplier where variance percentage is greater than 50%.
+Give me details of number of orders per supplier where variance percentage is greater than 50%.
+Plot me a chart for average variance days per category of items.
+Plot me a chart for number of orders having variance percentage greater than 100% per supplier site. 
+
+
+
