@@ -1,5 +1,35 @@
 Projects Added New : 
 
+3. GSoC 2026 - Kubeflow Agentic RAG on Kubeflow:
+Accepted for Google Summer of Code 2026 with Kubeflow for the "Agentic RAG on Kubeflow" project.
+Goal: expand kubeflow/docs-agent from a basic retrieval tool into an agentic RAG reference architecture for Kubeflow.
+Relevant work:
+- Build multi-index retrieval over Kubeflow documentation, GitHub issues, and Kubernetes manifests.
+- Add MCP tools for docs, issue, and code search.
+- Build ingestion pipelines with Kubeflow Pipelines, KServe deployment patterns, Milvus/vector search, and OCI/OKE deployment reference.
+- Live-tested docs-agent stack on OCI/OKE.
+- Indexed 1,631 GitHub issue chunks and 477 manifest/code chunks.
+- Created 71 tests and CI workflow foundation for the previously zero-test project.
+Relevant skills: Python, FastAPI, Kubeflow Pipelines, KServe, Kagent, MCP, RAG, Milvus, vector search, OCI, OKE, Kubernetes, Docker, Terraform/manifests.
+
+4. Oracle OAL - ACT Agent and MPN Matching:
+Current role from 8 Apr 2026: AI Application Developer at Oracle Applications Labs (OAL).
+Earlier role: Application Developer in Oracle SCM.
+
+Web Search Enhancement for MPN Matching:
+- Added web-search functionality to improve MPN matching where fuzzy matching and clustering did not produce sufficient matches.
+- Identifies MPNs that could not be matched through fuzzy or cluster-based logic.
+- Uses catalog lookup from official and reliable third-party retailer/catalog sources.
+- Improves asset and part matching coverage for ACT workflows.
+- Supports downstream reconciliation and migration-readiness analysis.
+
+LangGraph POC for ACT Agent:
+- Built proof of concept to evaluate moving the ACT agent from a Codex-style implementation to a LangGraph-based orchestration model.
+- Converted Codex skill concepts into specialized worker-agent responsibilities.
+- Explored clearer routing, specialization, and maintainability for agent logic.
+- Identified feasibility and tradeoffs of moving to LangChain/LangGraph.
+- Provides a technical foundation for future ACT agent architecture decisions.
+
 1. Chem fine tuned llm : This project involved fine tunning llama 7b model on chem 12 chemistry ncert. 
 Linkedin post : 
 Many times while preparing for JEE or board exams, I used to wonder if I could ask my doubts again to my tutor — especially when I or someone else felt too shy to ask in class, or when I simply forgot and wanted to revisit a concept. It wasn’t always easy.
