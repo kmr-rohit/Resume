@@ -1,0 +1,241 @@
+%-------------------------
+% Rohit Kumar - Single Column Resume (Software Engineer)
+% Source content adapted from deedy_resume-openfont.tex
+%------------------------
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\ifdefined\pdfgentounicode\pdfgentounicode=1\fi}{}
+% ATS: keep f-ligatures out of the PDF so "workflow"/"Kubeflow" extract as real text
+\IfFileExists{microtype.sty}{\usepackage{microtype}\DisableLigatures[f]{encoding=*}}{}
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.0cm, top=0.3cm, right=0.9cm, bottom=0.3cm}
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-9pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} & \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.8mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.8mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt,label={},labelsep=0mm,itemsep=1.2mm,topsep=0.5mm,parsep=0pt]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.2mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=1ex, noitemsep,labelsep=1.2mm,itemsep=0mm,topsep=0.4mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+\newcommand{\name}{Rohit Kumar}
+\newcommand{\phone}{9306641852}
+\newcommand{\emaila}{rr7433446@gmail.com}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large Rohit Kumar} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Software Engineer $\vert$ Full Stack \& Distributed Systems} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  {B.Tech, NIT Warangal $\vert$ Bengaluru, India} & \href{https://www.linkedin.com/in/rr7433446/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn}}\enspace
+  \href{https://github.com/kmr-rohit}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub}}\enspace
+  \href{https://kmrrohit.space/}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ {Portfolio}}
+\end{tabularx}
+}
+
+%-----------SUMMARY-----------
+\section{\textbf{Professional Summary}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small{\item{
+    Software engineer with \textbf{2+ years} of \textbf{full stack development} at Oracle - back-end services in \textbf{Python and Java}, front-ends in \textbf{JavaScript/TypeScript, React, HTML, and CSS}. Ships event-driven microservices on \textbf{Kafka, REST APIs, Oracle DB/PostgreSQL, Docker, and Kubernetes} with \textbf{Prometheus} observability and \textbf{CI/CD}. \textbf{Google Summer of Code 2026} contributor to \textbf{Kubeflow} (CNCF); strong \textbf{data structures, algorithms, and system design} fundamentals, \textbf{600+} problems solved.
+  }}
+\end{itemize}
+\vspace{-8pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{\textbf{Technical Skills}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small{\item{
+    \textbf{Languages}{: Python, Java, C\texttt{++}, JavaScript, TypeScript, SQL, Bash} \\
+    \textbf{Back-End}{: REST API design, FastAPI, Node.js, Express.js, Apache Kafka, microservices, WebSockets, Oracle ADF (Java), concurrency} \\
+    \textbf{Front-End}{: React, Next.js, TypeScript, HTML5, CSS3, Tailwind CSS, ShadCN, ReactFlow, Oracle JET, accessible responsive UI} \\
+    \textbf{Databases}{: PostgreSQL, Oracle Database, MySQL, Elasticsearch, Prisma ORM, Supabase, Firebase} \\
+    \textbf{Cloud, DevOps \& Testing}{: Docker, Kubernetes, Helm, Istio, OCI/OKE, GitHub Actions, CI/CD, Prometheus, pytest, unit/integration testing} \\
+    \textbf{Fundamentals}{: Data Structures, Algorithms, OOP, System Design, Distributed Systems, Agile; LangChain, LangGraph, RAG, MCP}
+  }}
+\end{itemize}
+\vspace{-8pt}
+
+%-----------EXPERIENCE-----------
+\section{\textbf{Professional Experience}}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Software Engineer}{Bengaluru, India}
+    {Oracle}{Jun 2024 - Present}
+    \vspace{0.4mm}
+    \resumeItemListStart
+      \item {Designed and built an \textbf{event-driven Alert Notification microservice} (\textbf{Python, FastAPI, Apache Kafka, Oracle DB, Docker, Kubernetes/Helm}): an HTTP API durably enqueues alerts onto a replicated Kafka topic and a consumer group delivers them with \textbf{at-least-once} semantics, bounded retries, and a dead-letter queue.}
+      \item {Made retries safe with \textbf{idempotency keys} plus a \textbf{transactional outbox}, and replaced a hand-rolled DB row-leasing queue with \textbf{Kafka consumer groups and partition rebalancing}, deleting lease/heartbeat/fencing code while gaining automatic worker failover.}
+      \item {Instrumented the ingest, produce, and delivery paths with \textbf{Prometheus} metrics (consumer lag, DLQ depth) and routed operational alerts via \textbf{Alertmanager to Slack} for on-call triage.}
+      \item {Delivered \textbf{full stack} features across 3 customer-facing Fusion SCM workflows - \textbf{Java/Python} service logic, \textbf{REST APIs}, \textbf{SQL} data access, and \textbf{JavaScript/TypeScript} UI, from \textbf{design review} to deployment.}
+      \item {Built an order-classification service on \textbf{Oracle ESS batch scheduling} with rule guardrails, exception routing, and human-review handoff, processing \textbf{10K+ order lines} per run, plus a part-matching pipeline that lifted coverage \textbf{\textasciitilde{}30\%}.}
+      \item {\textbf{Reviewed peer code} against style and testability guidelines, authored developer documentation, and \textbf{triaged/debugged production defects} across service, database, and UI layers.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Open Source Contributor - Kubeflow (CNCF)}{Remote}
+    {Google Summer of Code 2026}{May 2026 - Present}
+    \vspace{0.4mm}
+    \resumeItemListStart
+      \item {Selected for \textbf{GSoC 2026} to evolve \texttt{kubeflow/docs-agent} into a multi-source retrieval service; landed a \textbf{5.4K-line merged pull request} adding a three-tool \textbf{MCP server}, embedding service, and two ingestion pipelines, reviewed by upstream maintainers.}
+      \item {Built \textbf{multi-index retrieval} over GitHub issues, source code, Kubernetes manifests, and 1K+ Markdown pages - \textbf{10K+ indexed chunks} with path, product-area, and version metadata for filtered lookup.}
+      \item {Wrote a \textbf{71-test suite} and GitHub Actions \textbf{CI workflow} so ranking regressions fail the build; shipped \textbf{CI/CD to Kubernetes (OCI/OKE)} with \textbf{Helm} charts, \textbf{Istio} config, and edge \textbf{rate limiting, CORS, and JWT auth}.}
+      \item {Review contributor pull requests and host the project's bi-weekly community call for new contributors.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineer Intern - Application Developer}{Hyderabad, India}
+    {Oracle}{May 2023 - Jul 2023}
+    \vspace{0.4mm}
+    \resumeItemListStart
+      \item {Implemented \textbf{Copy Data} for lead-time columns in Oracle SCM across back-end service logic and UI, optimizing read/write paths with \textbf{Elasticsearch} queries and \textbf{PATCH-based REST} updates to cut round trips on bulk edits.}
+      \item {Added \textbf{linear-regression} trend analysis to \textbf{Oracle JET (JavaScript)} charts for supply-chain forecasting views.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+%-----------PROJECTS-----------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+  \resumeProject
+    {MacBatch - Distributed Batch Compute Scheduler}
+    {TypeScript, Python, FastAPI, Node.js CLI, Ollama, Apple Silicon}
+    {2026}
+    {\href{https://github.com/kmr-rohit/macbatch}{Source}\enspace\href{https://kmr-rohit.github.io/macbatch/}{Docs}}
+    \vspace{0.4mm}
+    \resumeItemListStart
+      \item {Built an open-source \textbf{distributed job scheduler} that fans batch work across a pool of idle machines: a \textbf{FastAPI} control plane models jobs $\rightarrow$ shards $\rightarrow$ tasks, and workers acquire \textbf{600s leases} with automatic reclaim and reassignment on worker failure.}
+      \item {Designed a \textbf{pull-based worker protocol} so machines behind NAT join with outbound HTTPS only, and published the worker as an \texttt{npm} CLI; benchmarked \textbf{252,686 items/hour} per node and a \textbf{2.8$\times$} throughput gain from shard batching alone.}
+    \resumeItemListEnd
+
+  \resumeProject
+    {CrackRound - Real-Time Full Stack Interview Platform}
+    {Next.js, TypeScript, Node.js, WebSockets, Prisma, PostgreSQL}
+    {2025}
+    {\href{https://crackrounds.space/}{Website}}
+    \vspace{0.4mm}
+    \resumeItemListStart
+      \item {Shipped a production \textbf{full stack web application} end to end - \textbf{React/Next.js} front-end, \textbf{TypeScript} API layer, \textbf{PostgreSQL} schema via \textbf{Prisma}, authentication, credit billing, and deployment.}
+      \item {Engineered a \textbf{real-time bidirectional WebSocket} pipeline (streaming STT $\rightarrow$ model $\rightarrow$ streamed audio) at \textbf{\textasciitilde{}1.5s} end-to-end latency, with a sandboxed \textbf{DSA code judge}, \textbf{JSON-schema} scoring, and a \textbf{\$2/session} cost ceiling.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-3mm}
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Bachelor of Technology in Mechanical Engineering}{CGPA: 7.34}
+    {National Institute of Technology, Warangal}{2020 - 2024}
+\resumeSubHeadingListEnd
+\vspace{-1mm}
+
+%-----------ACHIEVEMENTS-----------
+\section{\textbf{Achievements}}
+\resumeItemListStart
+  \item {Solved \textbf{600+ data structures and algorithms} problems on LeetCode, GeeksforGeeks, and Codeforces; organized \textbf{15+ competitive programming contests}.}
+  \item {Won \textbf{Oracle Gen AI Hackathon} (\textbf{1st of 33 teams}, top 5 of 300+ employees); Runner-up, \textbf{Tri-NIT Hackathon 2024}, Backend track; speaker, \textbf{Kubeflow Community Showcase 2026}.}
+\resumeItemListEnd
+
+\vspace{-2mm}
+
+\end{document}
