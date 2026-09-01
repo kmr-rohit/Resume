@@ -132,7 +132,7 @@
 \section{\textbf{Professional Summary}}
 \begin{itemize}[leftmargin=0.05in, label={}]
   \small{\item{
-    Full stack engineer with \textbf{2+ years} at Oracle building \textbf{React.js} front-ends and \textbf{Node.js/Express} REST services for Fusion SCM Cloud over \textbf{PostgreSQL, MySQL, and Oracle DB}. Ships containerized services on \textbf{Docker and Kubernetes} with \textbf{Prometheus} observability and \textbf{CI/CD}, and builds \textbf{AI agents, RAG chatbots, and LLM workflows} using \textbf{LLM APIs, LangChain/LangGraph, FastAPI, and vector databases}. \textbf{Google Summer of Code 2026} contributor to \textbf{Kubeflow} (CNCF).
+    Full stack engineer with \textbf{2+ years} at Oracle shipping \textbf{React/Node.js} features and \textbf{event-driven Kafka microservices} for Fusion SCM Cloud, plus production \textbf{RAG and agentic AI} workflows. Winner, \textbf{Oracle Gen AI Hackathon} (1st of 33 teams); selected for \textbf{Google Summer of Code 2026} on Kubeflow (CNCF).
   }}
 \end{itemize}
 \vspace{-8pt}
@@ -160,12 +160,11 @@
     {Oracle}{Jun 2024 - Present}
     \vspace{0.4mm}
     \resumeItemListStart
-      \item {Build the \textbf{Oracle Fusion SCM} customer-facing UI with \textbf{React.js} as the primary front-end technology across \textbf{3 workflows}--catalog lookup, order review, and planner assistance--shipping reusable components, client-side state management, form validation, and responsive layouts.}
-      \item {Develop the \textbf{REST services in Node.js/Express} behind those screens--resource-oriented endpoints, request validation, pagination, auth middleware, and structured error handling--over \textbf{SQL} data access in \textbf{Oracle DB}, tuning indexes and joins for \textbf{10K\texttt{+} row} payloads.}
-      \item {Collaborate with \textbf{UI/UX designers and product managers} in design reviews, giving feedback on wireframes and user flows and implementing them as accessible, responsive screens--including bulk-edit flows that let planners finish multi-step tasks inline.}
-      \item {Designed an \textbf{event-driven Alert Notification microservice} (\textbf{Apache Kafka, Docker, Kubernetes/Helm}) with \textbf{at-least-once} delivery, idempotency keys, a transactional outbox, bounded retries, and a dead-letter queue; instrumented it with \textbf{Prometheus} metrics (consumer lag, DLQ depth) alerting to Slack via \textbf{Alertmanager}.}
-      \item {Built \textbf{AI agents and workflows} served over \textbf{FastAPI} using \textbf{LLM APIs, LangChain/LangGraph, embeddings, and vector databases}: a \textbf{RAG chatbot} for planner assist (\textbf{\textasciitilde{}40\%} less repeated manual investigation), an order-classification agent with rule guardrails and human-review handoff (\textbf{10K\texttt{+} order lines}/run), and a part-matching pipeline (\textbf{\textasciitilde{}30\%} coverage lift).}
-      \item {\textbf{Review peer code}, author developer documentation, and triage production defects across UI, service, and database layers.}
+      \item {Built the \textbf{Oracle Fusion SCM} customer-facing UI in \textbf{React.js} across 3 workflows (catalog lookup, order review, planner assistance) with reusable components and responsive layouts.}
+      \item {Built \textbf{REST services in Node.js/Express} behind those screens over \textbf{Oracle DB}, tuning indexes/joins for \textbf{10K\texttt{+} row} payloads.}
+      \item {Designed an \textbf{event-driven Alert Notification microservice} (\textbf{Kafka, Docker, Kubernetes/Helm}) with \textbf{at-least-once} delivery and \textbf{Prometheus/Alertmanager} on-call alerting.}
+      \item {Built \textbf{AI agents} over \textbf{FastAPI} (\textbf{LangChain/LangGraph}, RAG, vector databases): a planner-assist chatbot (\textbf{\textasciitilde{}40\%} less manual investigation) and an order-classification agent (\textbf{10K\texttt{+} order lines}/run).}
+      \item {Reviewed peer code, authored developer documentation, and triaged production defects across UI, service, and database layers.}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -173,9 +172,9 @@
     {Google Summer of Code 2026}{May 2026 - Present}
     \vspace{0.4mm}
     \resumeItemListStart
-      \item {Selected for \textbf{GSoC 2026} to evolve \texttt{kubeflow/docs-agent} into a multi-source \textbf{RAG chatbot}; landed a \textbf{5.4K-line merged pull request} adding a three-tool \textbf{MCP server}, embedding service, and two ingestion pipelines.}
-      \item {Built \textbf{multi-index retrieval} over GitHub issues, source code, Kubernetes manifests, and 1K\texttt{+} Markdown pages (\textbf{10K\texttt{+} indexed chunks}); wrote a \textbf{71-test suite} with \textbf{GitHub Actions} CI so ranking regressions fail the build.}
-      \item {Shipped \textbf{CI/CD to Kubernetes (OCI/OKE)} with \textbf{Helm} and \textbf{Istio}, plus edge \textbf{rate limiting, CORS, and JWT auth}; review contributor PRs and host the bi-weekly community call.}
+      \item {Selected for \textbf{GSoC 2026} to evolve \texttt{kubeflow/docs-agent} into a multi-source \textbf{RAG chatbot}; landed a \textbf{5.4K-line merged pull request} adding a three-tool \textbf{MCP server} and two ingestion pipelines.}
+      \item {Built \textbf{multi-index retrieval} over GitHub issues, source code, and 1K\texttt{+} Markdown pages into \textbf{10K\texttt{+} indexed chunks}; wrote a \textbf{71-test suite} with CI.}
+      \item {Shipped \textbf{CI/CD to Kubernetes (OCI/OKE)} with \textbf{Helm/Istio} and edge auth; review contributor PRs and host the bi-weekly community call.}
     \resumeItemListEnd
 
   \resumeSubheading
