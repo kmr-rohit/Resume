@@ -132,7 +132,7 @@
 \section{\textbf{Professional Summary}}
 \begin{itemize}[leftmargin=0.05in, label={}]
   \small{\item{
-    Software engineer with \textbf{2+ years} of \textbf{full stack development} at Oracle - back-end services in \textbf{Python and Java}, front-ends in \textbf{JavaScript/TypeScript, React, HTML, and CSS}. Ships event-driven microservices on \textbf{Kafka, REST APIs, Oracle DB/PostgreSQL, Docker, and Kubernetes} with \textbf{Prometheus} observability and \textbf{CI/CD}. \textbf{Google Summer of Code 2026} contributor to \textbf{Kubeflow} (CNCF); strong \textbf{data structures, algorithms, and system design} fundamentals, \textbf{600+} problems solved.
+    Backend-leaning full stack engineer with \textbf{2+ years} at Oracle shipping \textbf{event-driven microservices on Apache Kafka} and full-stack Fusion SCM features end to end. Winner, \textbf{Oracle Gen AI Hackathon} (1st of 33 teams); selected for \textbf{Google Summer of Code 2026} on Kubeflow (CNCF). Strong \textbf{data structures, algorithms, and system design} fundamentals, \textbf{600+} problems solved.
   }}
 \end{itemize}
 \vspace{-8pt}
@@ -160,12 +160,11 @@
     {Oracle}{Jun 2024 - Present}
     \vspace{0.4mm}
     \resumeItemListStart
-      \item {Designed and built an \textbf{event-driven Alert Notification microservice} (\textbf{Python, FastAPI, Apache Kafka, Oracle DB, Docker, Kubernetes/Helm}): an HTTP API durably enqueues alerts onto a replicated Kafka topic and a consumer group delivers them with \textbf{at-least-once} semantics, bounded retries, and a dead-letter queue.}
-      \item {Made retries safe with \textbf{idempotency keys} plus a \textbf{transactional outbox}, and replaced a hand-rolled DB row-leasing queue with \textbf{Kafka consumer groups and partition rebalancing}, deleting lease/heartbeat/fencing code while gaining automatic worker failover.}
-      \item {Instrumented the ingest, produce, and delivery paths with \textbf{Prometheus} metrics (consumer lag, DLQ depth) and routed operational alerts via \textbf{Alertmanager to Slack} for on-call triage.}
-      \item {Delivered \textbf{full stack} features across 3 customer-facing Fusion SCM workflows - \textbf{Java/Python} service logic, \textbf{REST APIs}, \textbf{SQL} data access, and \textbf{JavaScript/TypeScript} UI, from \textbf{design review} to deployment.}
-      \item {Built an order-classification service on \textbf{Oracle ESS batch scheduling} with rule guardrails, exception routing, and human-review handoff, processing \textbf{10K+ order lines} per run, plus a part-matching pipeline that lifted coverage \textbf{\textasciitilde{}30\%}.}
-      \item {\textbf{Reviewed peer code} against style and testability guidelines, authored developer documentation, and \textbf{triaged/debugged production defects} across service, database, and UI layers.}
+      \item {Designed an \textbf{event-driven Alert Notification microservice} (\textbf{Kafka, FastAPI, Oracle DB, Kubernetes/Helm}) with \textbf{at-least-once} delivery via idempotency keys, a transactional outbox, and a dead-letter queue.}
+      \item {Replaced a hand-rolled DB row-leasing queue with \textbf{Kafka consumer groups}, deleting lease/heartbeat code while gaining automatic worker failover; added \textbf{Prometheus/Alertmanager} on-call alerting.}
+      \item {Delivered \textbf{full stack} features across 3 customer-facing Fusion SCM workflows - \textbf{Java/Python} services, \textbf{REST APIs}, and \mbox{\textbf{JavaScript/TypeScript}} UI, from design review to deployment.}
+      \item {Built an \textbf{order-classification service} on Oracle ESS batch scheduling processing \textbf{10K+ order lines/run}, plus a part-matching pipeline that lifted coverage \textbf{\textasciitilde{}30\%}.}
+      \item {Reviewed peer code, authored developer documentation, and \textbf{triaged production defects} across service, database, and UI layers.}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -173,10 +172,9 @@
     {Google Summer of Code 2026}{May 2026 - Present}
     \vspace{0.4mm}
     \resumeItemListStart
-      \item {Selected for \textbf{GSoC 2026} to evolve \texttt{kubeflow/docs-agent} into a multi-source retrieval service; landed a \textbf{5.4K-line merged pull request} adding a three-tool \textbf{MCP server}, embedding service, and two ingestion pipelines, reviewed by upstream maintainers.}
-      \item {Built \textbf{multi-index retrieval} over GitHub issues, source code, Kubernetes manifests, and 1K+ Markdown pages - \textbf{10K+ indexed chunks} with path, product-area, and version metadata for filtered lookup.}
-      \item {Wrote a \textbf{71-test suite} and GitHub Actions \textbf{CI workflow} so ranking regressions fail the build; shipped \textbf{CI/CD to Kubernetes (OCI/OKE)} with \textbf{Helm} charts, \textbf{Istio} config, and edge \textbf{rate limiting, CORS, and JWT auth}.}
-      \item {Review contributor pull requests and host the project's bi-weekly community call for new contributors.}
+      \item {Selected for \textbf{GSoC 2026} to evolve \texttt{kubeflow/docs-agent} into a multi-source retrieval service; landed a \textbf{5.4K-line merged pull request} adding a three-tool \textbf{MCP server} and two ingestion pipelines, reviewed by upstream maintainers.}
+      \item {Built \textbf{multi-index retrieval} over GitHub issues, source code, and 1K+ Markdown pages into \textbf{10K+ indexed chunks}; wrote a \textbf{71-test suite} with CI so ranking regressions fail the build.}
+      \item {Shipped \textbf{CI/CD to Kubernetes (OCI/OKE)} with Helm/Istio; review contributor PRs and host the project's bi-weekly community call.}
     \resumeItemListEnd
 
   \resumeSubheading
